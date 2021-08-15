@@ -1,0 +1,19 @@
+<div class="menu-container">
+ <div class="row">
+  
+    <% 3.times do %>
+    <% @products.each do |product| %>
+    <div class="col-4"> 
+        <h5><%= product.name %> </h5>
+        <p><%= product.description %></p>
+        <p><%= product.size %></p>
+        <span><%= product.price %> | <%= product.in_store ? "Available for catering" : "" %>  
+    </div>
+
+    <%end%>        
+    <%end%>
+
+
+
+ </div>
+</div>
