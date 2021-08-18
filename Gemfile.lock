@@ -75,6 +75,7 @@ GEM
       responders
       warden (~> 1.2.3)
     erubi (1.10.0)
+    ffaker (2.19.0)
     ffi (1.15.3)
     globalid (0.5.2)
       activesupport (>= 5.0)
@@ -196,6 +197,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   devise
+  ffaker
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg (~> 1.1)
