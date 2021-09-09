@@ -10,13 +10,12 @@
     ·
     <a href="https://shakehub-marketplace.herokuapp.com/">Link to Website</a></p>
   
-## Problem and identification 
-The hustling of daily life can be interrupt by one long line of wait for you're daily drink ritual</
-During the covid pandemic, the demand for taking away/delivery is at an all time hight 
+## Identify problem and Solution from Shakehub: 
+-	In time of changes, during the pandemic – Australia is observing exponential changes in way eat out is being approached. 
+-	Statistic has shown the used of meal delivery services by all Generation between two period of Mar 2018 (pre-pandemic) and Sep 2019 (pandemic period) to be double in Millennials, Gen Z and Gen X.
+-	 This only prove that the ratio of 1:5 of Australian now using meal delivery services.  
+-	Shakehub can help stores to set up online traffic, for delivery – increase competitiveness, brand visibility
 
-Shake hub is a demonstration of how business can implement online menu, and info, with a payment method and no longer clients dont have to wait in line and have their drinks to be delivered right through their door
-
-This marketplace project is part of a learning process to create a mvp for mainstream hospitality industry 
 
 <p> github link: <a href="https://github.com/Neymartri/shake-hub-marketplace-"></a> <p>
 <p> Heroku link: <a href="https://shakehub-marketplace.herokuapp.com/"></a> </p>
@@ -98,7 +97,6 @@ This marketplace project is part of a learning process to create a mvp for mains
 -	Lucid chart: sketch ERD for backend of shakehub
 -	VScode: Code editing software with varieties of extensions, help coding this app project. Free to use – would recommend
 -	Gloomaps: online sitemap creation platform. Show overall picture the web page application. 
-
 
 
 ## Tech stack 
@@ -209,10 +207,39 @@ ActiveRecord::Schema.define(version: 2021_08_17_230204) do
   add_foreign_key "products", "categories"
 end
 
-  
+## Database relation: 
+### User 
+- has one User_ID 
+- has one Username 
+- future add: address and contact info and sign-up string
+
+### orders
+- belongs to user_Id
+- Product_ID (have many multiple products)
+- has one Order_ID 
+- Order_ID belongs to User
+- Order total and order subtotal (to be implemented in future)
+
+### Order_items
+- Order_id belongs to orders
+- Product_ID belongs to orders and products 
+
+### Products
+- has one Products_id
+- product_id belongs to product_category
+
+### Product_category
+- has one Category_id 
+- has many Product 
+
+### active_storage_attachments
+- has one active_storage_ID
+- has one product_id
+
 
 ## trello board 
 <img src="app/assets/images/trello.png">
+<img src="app/assets/images/trello_end.png">
 
 <h3>Website overview</h3>
 <img src="app/assets/images/web1.png">
@@ -223,8 +250,10 @@ end
 
 ### Final ERD
 <img src="app/assets/images/FinalERD.png">
-<h3>Wireframes</h3>
+
+### Wireframes
 <img src="app/assets/images/wireframe.png"> 
 <img src="app/assets/images/wireframe2.png">
 
-
+### sitemap
+<img src="app/assets/images/sitemap.png">
